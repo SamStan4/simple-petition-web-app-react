@@ -7,6 +7,8 @@ const appRouter = express();
 
 appRouter.use(express.json());
 
+const signatureRouter = require("./routes/signatureRouter/signatureRouter");
+
 const LISTEN_PORT = process.env.LISTEN_PORT;
 
 if (!LISTEN_PORT) {
@@ -16,12 +18,14 @@ if (!LISTEN_PORT) {
 
 //*********************************************************************************************************************************//
 
+appRouter.use("/signature", signatureRouter);
+
 /**
  * Catchall endpoint for bad requests
  */
 appRouter.all("*", async function (_, res) {
   res.status(404).json({
-    message: "Error, route not found"
+    message: "Error, not found"
   });
 });
 
