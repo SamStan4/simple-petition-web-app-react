@@ -7,7 +7,8 @@ const appRouter = express();
 
 appRouter.use(express.json());
 
-const signatureRouter = require("./routes/signatureRouter/signatureRouter");
+// im on windows, is this bad path?
+const signatureRouter = require("./routes/signatureRouter.js");
 
 const LISTEN_PORT = process.env.LISTEN_PORT;
 
@@ -20,9 +21,6 @@ if (!LISTEN_PORT) {
 
 appRouter.use("/signature", signatureRouter);
 
-/**
- * Catchall endpoint for bad requests
- */
 appRouter.all("*", async function (_, res) {
   res.status(404).json({
     message: "Error, not found"
