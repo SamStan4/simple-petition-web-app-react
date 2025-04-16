@@ -1,3 +1,15 @@
+-- dummy data courtesy of chat gpt
+-- prompt:
+-- could you create a small dummy data dump for this:
+-- CREATE TABLE IF NOT EXISTS SignatureTable (
+--     signatureName TEXT,
+--     signatureEmail TEXT,
+--     signatureCity TEXT,
+--     signatureState TEXT,
+--     PRIMARY KEY (signatureName, signatureEmail, signatureCity, signatureState)
+-- );
+-- end prompt
+
 INSERT INTO SignatureTable (signatureName, signatureEmail, signatureCity, signatureState) VALUES
 ('Alice Johnson', 'alice.johnson@example.com', 'Los Angeles', 'CA'),
 ('Bob Smith', 'bob.smith@example.com', 'Chicago', 'IL'),

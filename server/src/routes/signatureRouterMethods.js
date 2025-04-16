@@ -26,8 +26,21 @@ async function getSignatures() {
   });
 }
 
+async function addSignature(name, email, city, state) {
+  const sqlString = "INSERT INTO SignatureTable (signatureName, signatureEmail, signatureCity, signatureState) VALUES (?, ?, ?, ?)";
+  return new Promise((resolve, reject) => {
+    db.run(sqlString, [name, email, city, state], function (err) {
+      if (err) {
+        return reject(err);
+      }
+      return resolve(true);
+    });
+  });
+}
+
 //*********************************************************************************************************************************//
 
 module.exports = {
-  getSignatures
+  getSignatures,
+  addSignature
 };
