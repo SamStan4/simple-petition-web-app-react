@@ -13,7 +13,7 @@ const db = new sqlite3.Database("./data/signatures.db", (err) => {
 //*********************************************************************************************************************************//
 
 async function getSignatures() {
-  const sqlString = "SELECT * FROM SignatureTable;";
+  const sqlString = "SELECT * FROM SignatureTable ORDER BY signatureName ASC;";
   return new Promise((resolve, reject) => {
     db.all(sqlString, [], function (err, rows) {
       if (err) {
