@@ -1,0 +1,18 @@
+.signature-text-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-text {
+    font-size: 27px;
+    color: #0000FF;
+}
+
+.second-text-wrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
