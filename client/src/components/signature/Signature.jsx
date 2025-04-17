@@ -1,8 +1,9 @@
 import "./SignatureStyles.css";
 
 export default function Signature({ signature, index }) {
+  const signatureWrapperStyle = "single-signature-wrapper-styles" + (index % 2 === 0 ? " gray-styles" : "");
   return (
-    <div className="single-signature-wrapper-styles">
+    <div className={signatureWrapperStyle}>
       <div className="name-styles">
         <p className="text-styles">{signature.signatureName}</p>
       </div>
