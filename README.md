@@ -16,5 +16,9 @@ npm install
 npm run dev
 ```
 
+### Port stuff
+- client port: 3000
+- server port: 4000 (inside .env file)
+
 ### NOTE:  
 No database work needed, app comes packaged with SQLite instance

@@ -27,6 +27,7 @@ export default function SignatureForm({ onSubmitForm }) {
       return;
     }
     onSubmitForm(name, email, city, state);
+    event.target.reset();
   }
   return (
     <div className="signature-form-wrapper">

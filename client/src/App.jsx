@@ -9,7 +9,7 @@ export default function App() {
       <div className="app-wrapper">
         <Navbar/>
         <Routes>
-          <Route path="/signatures" element={SignaturePage()}/>
+          <Route path="/" element={SignaturePage()}/>
         </Routes>
       </div>
     </BrowserRouter>
