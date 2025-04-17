@@ -19,10 +19,10 @@
 }
 
 .inner-form-wrapper {
-    width: 97%;
+    width: 95%;
     height: 97%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #FF00FF; /* delete later */
+    /* border: 1px solid #FF00FF; */
 }

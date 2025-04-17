@@ -1,10 +1,12 @@
 const express = require("express");
+const cors = require("cors");
 const dotenv = require("dotenv");
 
 dotenv.config();
 
 const appRouter = express();
 
+appRouter.use(cors());
 appRouter.use(express.json());
 
 // im on windows, is this bad path?
